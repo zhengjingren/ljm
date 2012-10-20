@@ -1,6 +1,6 @@
 #coding: utf-8
 
-from flask.ext.script import Manager, Server, prompt_bool
+from flask.ext.script import Manager, Server
 from qieziquan import create_app
 
 manager = Manager(create_app())
