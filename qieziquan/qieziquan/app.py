@@ -4,16 +4,6 @@ from flask import Flask
 from .extensions import db
 from .utils import import_object
 
-import os
-PROJDIR = os.path.abspath(os.path.dirname(__file__))
-ROOTDIR = os.path.split(PROJDIR)[0]
-
-try:
-    import qieziquan
-except ImportError:
-    import site
-    site.addsitedir(ROOTDIR)
-
 
 def create_app(config='config.py'):
     app = Flask(__name__)
